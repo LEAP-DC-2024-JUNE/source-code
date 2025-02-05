@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  padding-top: 60px;
+  background-color: #f3f5f7;
+}
+
+.inner-container {
+  width: 377px;
+  padding: 24px 16px;
+  border-radius: 8px;
+  margin-inline: auto;
+  background-color: white;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.16);
+}
+
+.title {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer {
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.pinecone {
+  color: #3b73ed;
+  margin-left: 4px;
+}

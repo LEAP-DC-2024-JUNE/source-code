@@ -1,0 +1,32 @@
+.filterButtons {
+  height: 32px;
+  display: flex;
+  column-gap: 6px;
+  margin-block: 20px;
+}
+
+.ActiveFilterButton {
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  padding-inline: 12px;
+  text-transform: capitalize;
+  background-color: #3c82f6;
+  transition: all 200ms ease-in-out;
+}
+
+.InActiveFilterButton {
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  color: #363636;
+  font-weight: 500;
+  border-radius: 6px;
+  padding-inline: 12px;
+  text-transform: capitalize;
+  background-color: #e5e7eb;
+  transition: all 200ms ease-in-out;
+}

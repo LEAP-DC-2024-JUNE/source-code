@@ -1,0 +1,34 @@
+.form {
+  height: 40px;
+  display: flex;
+  column-gap: 6px;
+}
+
+.formInput {
+  flex: 1;
+  outline: none;
+  font-size: 14px;
+  border-radius: 6px;
+  padding-inline: 16px;
+  border: 1px solid #e4e4e7;
+}
+
+.formInput:focus {
+  outline-offset: -1px;
+  outline: 2px solid #2463eb;
+}
+
+.formButton {
+  width: 59px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #f9f9f9;
+  border-radius: 6px;
+  padding-inline: 16px;
+  background-color: #3c82f6;
+}
+
+.formButton:active {
+  box-shadow: 0 0 0 2px #3b82f6;
+}

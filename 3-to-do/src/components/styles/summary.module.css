@@ -1,0 +1,26 @@
+.summary {
+  display: flex;
+  padding-top: 16px;
+  align-items: center;
+  margin-bottom: 40px;
+  justify-content: space-between;
+  border-top: 1px solid #e5e7eb;
+}
+
+.tasks {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.clearCompletedButton {
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #ef4444;
+  background-color: transparent;
+}
+
+.clearCompletedButton:hover {
+  color: #dc2626;
+}
