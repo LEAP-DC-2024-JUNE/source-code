@@ -1,5 +1,5 @@
 export const initialFormValues = {
-  email: "",
+  email: "Мэйл хаягаа оруулна уу",
   lastName: "",
   username: "",
   password: "",

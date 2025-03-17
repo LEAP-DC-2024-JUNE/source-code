@@ -4,9 +4,19 @@ import { FileUpload } from "../feature";
 import { StepWrapper, InputField } from "../ui";
 import { validateStepThree, removeFormDataFromLocalStorage } from "@/utils";
 
-export const ProfileStep = ({ formErrors, formValues, goToNextStep, goToPreviousStep, updateFormErrors, handleInputChange, setFormValues, setFormErrors }) => {
+export const ProfileStep = ({
+  formErrors,
+  formValues,
+  goToNextStep,
+  goToPreviousStep,
+  updateFormErrors,
+  handleInputChange,
+  setFormValues,
+  setFormErrors,
+}) => {
   const { dateOfBirth } = formValues;
-  const { dateOfBirth: errorDateOfBirth, profileImage: errorProfileImage } = formErrors;
+  const { dateOfBirth: errorDateOfBirth, profileImage: errorProfileImage } =
+    formErrors;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -38,7 +48,11 @@ export const ProfileStep = ({ formErrors, formValues, goToNextStep, goToPrevious
           onChange={handleInputChange}
         />
 
-        <FileUpload error={errorProfileImage} setFormValues={setFormValues} setFormErrors={setFormErrors} />
+        <FileUpload
+          error={errorProfileImage}
+          setFormValues={setFormValues}
+          setFormErrors={setFormErrors}
+        />
 
         <Footer step="Continue 3/3" goToPreviousStep={goToPreviousStep} />
       </Fragment>

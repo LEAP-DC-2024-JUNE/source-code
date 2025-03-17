@@ -3,9 +3,21 @@ import { Footer } from "../layer";
 import { StepWrapper, InputField } from "../ui";
 import { validateStepTwo, saveFormDataToLocalStorage } from "@/utils";
 
-export const ContactInfoStep = ({ formErrors, formValues, goToNextStep, goToPreviousStep, updateFormErrors, handleInputChange }) => {
+export const ContactInfoStep = ({
+  formErrors,
+  formValues,
+  goToNextStep,
+  goToPreviousStep,
+  updateFormErrors,
+  handleInputChange,
+}) => {
   const { email, phoneNumber, password, confirmPassword } = formValues;
-  const { email: errorEmail, phoneNumber: errorPhoneNumber, password: errorPassword, confirmPassword: errorConfirmPassword } = formErrors;
+  const {
+    email: errorEmail,
+    phoneNumber: errorPhoneNumber,
+    password: errorPassword,
+    confirmPassword: errorConfirmPassword,
+  } = formErrors;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,6 +26,7 @@ export const ContactInfoStep = ({ formErrors, formValues, goToNextStep, goToPrev
 
     if (isFormValid) {
       saveFormDataToLocalStorage(2, formValues);
+
       goToNextStep();
       return;
     }
@@ -24,7 +37,14 @@ export const ContactInfoStep = ({ formErrors, formValues, goToNextStep, goToPrev
   return (
     <StepWrapper handleSubmit={handleSubmit}>
       <Fragment>
-        <InputField name="email" value={email} onChange={handleInputChange} placeholder="Your email" error={errorEmail} label="Email" />
+        <InputField
+          name="email"
+          value={email}
+          onChange={handleInputChange}
+          placeholder="Your email"
+          error={errorEmail}
+          label="Email"
+        />
 
         <InputField
           name="phoneNumber"

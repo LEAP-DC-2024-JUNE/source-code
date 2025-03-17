@@ -1,15 +1,15 @@
 export const saveFormDataToLocalStorage = (currentStep, formData) => {
   const formWithStep = { ...formData, currentStep };
 
-  localStorage.setItem("savedFormData", JSON.stringify(formWithStep));
+  localStorage.setItem("form", JSON.stringify(formWithStep));
 };
 
 export const retrieveFormDataFromLocalStorage = () => {
-  const savedFormData = localStorage.getItem("savedFormData");
+  const savedFormData = localStorage.getItem("form");
 
   return savedFormData ? JSON.parse(savedFormData) : null;
 };
 
 export const removeFormDataFromLocalStorage = () => {
-  localStorage.removeItem("savedFormData");
+  localStorage.removeItem("form");
 };

@@ -1,8 +1,13 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { retrieveFormDataFromLocalStorage } from "@/utils";
 import { initialFormValues, formStepAnimationVariants } from "@/constants";
-import { PersonalInfoStep, ContactInfoStep, ProfileStep, FinalStep } from "./steps";
+import {
+  PersonalInfoStep,
+  ContactInfoStep,
+  ProfileStep,
+  FinalStep,
+} from "./steps";
 
 export function MultiStepForm() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -41,11 +46,23 @@ export function MultiStepForm() {
     }
   }, []);
 
-  const CurrentStepComponent = [PersonalInfoStep, ContactInfoStep, ProfileStep, FinalStep][currentStep];
+  const CurrentStepComponent = [
+    PersonalInfoStep,
+    ContactInfoStep,
+    ProfileStep,
+    FinalStep,
+  ][currentStep];
 
   return (
     <AnimatePresence mode="wait">
-      <motion.div key={currentStep} initial="enter" animate="center" exit="exit" variants={formStepAnimationVariants} transition={{ duration: 0.5 }}>
+      <motion.div
+        key={currentStep}
+        initial="enter"
+        animate="center"
+        exit="exit"
+        variants={formStepAnimationVariants}
+        transition={{ duration: 0.5 }}
+      >
         <CurrentStepComponent
           formErrors={formErrors}
           formValues={formValues}
